@@ -6,6 +6,6 @@ import java.util.Random;
 public class test {
     public static void main(String[] args) {
         KSimilarityOfTwoString ks = new KSimilarityOfTwoString();
-        System.out.println(ks.kSimilarity("aabccb", "bbcaca"));
+        System.out.println(ks.kSimilarityBFS("aabccb", "bbcaca"));
     }
 }
