@@ -5,7 +5,8 @@ import java.util.Random;
 //问题测试类
 public class test {
     public static void main(String[] args) {
-        Decrypt d = new Decrypt();
-        System.out.println(-1 % 4);
+        Game g = new Game();
+        g.ballGame(6, new String[]{"....", ".EE.", "O.E.", "...."});
+        System.out.println();
     }
 }
