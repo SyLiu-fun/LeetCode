@@ -23,6 +23,7 @@ public class SegmentTree {
         this.lazy = new int[n << 2];
         this.update = new boolean[n << 2];
         this.change = new int[n << 2];
+        build(1, n - 1, 1);
     }
 
     //汇总左右子区间和, 左右子区间在数组中的存储位置为2*rt和2*rt+1
