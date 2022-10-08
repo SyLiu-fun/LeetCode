@@ -9,13 +9,13 @@ public class FastScanner {
     private byte[] buffer;
     private int bufferPointer, bytesRead;
 
-    private FastScanner() throws IOException {
+    public FastScanner() throws IOException {
         din = new DataInputStream(System.in);
         buffer = new byte[BUFFER_SIZE];
         bufferPointer = bytesRead = 0;
     }
 
-    private short nextShort() throws IOException {
+    public short nextShort() throws IOException {
         short ret = 0;
         byte c = read();
         while (c <= ' ') c = read();
@@ -27,7 +27,7 @@ public class FastScanner {
         return ret;
     }
 
-    private int nextInt() throws IOException {
+    public int nextInt() throws IOException {
         int ret = 0;
         byte c = read();
         while (c <= ' ') c = read();
@@ -51,13 +51,13 @@ public class FastScanner {
         return ret;
     }
 
-    private char nextChar() throws IOException {
+    public char nextChar() throws IOException {
         byte c = read();
         while (c <= ' ') c = read();
         return (char) c;
     }
 
-    private String nextString() throws IOException {
+    public String nextString() throws IOException {
         StringBuilder ret = new StringBuilder();
         byte c = read();
         while (c <= ' ') c = read();
@@ -67,12 +67,12 @@ public class FastScanner {
         return ret.toString();
     }
 
-    private void fillBuffer() throws IOException {
+    public void fillBuffer() throws IOException {
         bytesRead = din.read(buffer, bufferPointer = 0, BUFFER_SIZE);
         if (bytesRead == -1) buffer[0] = -1;
     }
 
-    private byte read() throws IOException {
+    public byte read() throws IOException {
         if (bufferPointer == bytesRead) fillBuffer();
         return buffer[bufferPointer++];
     }
